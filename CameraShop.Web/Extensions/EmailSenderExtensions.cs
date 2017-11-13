@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using CameraShop.Services.Contracts;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using CameraShop.Web.Services;
 
 namespace CameraShop.Web.Services
 {

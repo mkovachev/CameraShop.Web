@@ -1,6 +1,7 @@
 ﻿using CameraShop.Data;
 using CameraShop.Data.Models;
-using CameraShop.Web.Services;
+using CameraShop.Services.Contracts;
+using CameraShop.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;

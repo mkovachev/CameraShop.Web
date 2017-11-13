@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraShop.Web", "CameraSho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraShop.Data", "CameraShop.Data\CameraShop.Data.csproj", "{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraShop.Services", "CameraShop.Services\CameraShop.Services.csproj", "{0FA22533-D905-4E1B-85C1-E9A8F53BA6E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA22533-D905-4E1B-85C1-E9A8F53BA6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA22533-D905-4E1B-85C1-E9A8F53BA6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA22533-D905-4E1B-85C1-E9A8F53BA6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA22533-D905-4E1B-85C1-E9A8F53BA6E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

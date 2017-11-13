@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CameraShop.Services.Contracts;
 using System.Threading.Tasks;
 
-namespace CameraShop.Web.Services
+namespace CameraShop.Services.Services
 {
     // This class is used by the application to send email for account confirmation and password reset.
     // For more details see https://go.microsoft.com/fwlink/?LinkID=532713

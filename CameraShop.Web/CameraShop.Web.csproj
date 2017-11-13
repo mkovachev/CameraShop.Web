@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CameraShop.Data\CameraShop.Data.csproj" />
+    <ProjectReference Include="..\CameraShop.Services\CameraShop.Services.csproj" />
   </ItemGroup>
 
 </Project>
