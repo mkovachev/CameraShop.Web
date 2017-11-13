@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraShop.Web", "CameraShop.Web\CameraShop.Web.csproj", "{895EB2F4-1570-4082-850A-5FE76D35DC4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraShop.Data", "CameraShop.Data\CameraShop.Data.csproj", "{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{895EB2F4-1570-4082-850A-5FE76D35DC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{895EB2F4-1570-4082-850A-5FE76D35DC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{895EB2F4-1570-4082-850A-5FE76D35DC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ADFC52-9103-4E7B-8FCB-65EDB48906BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

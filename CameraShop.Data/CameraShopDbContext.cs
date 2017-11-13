@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CameraShop.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using CameraShop.Web.Models;
 
-namespace CameraShop.Web.Data
+namespace CameraShop.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class CameraShopDbContext : IdentityDbContext<User>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public CameraShopDbContext(DbContextOptions<CameraShopDbContext> options)
             : base(options)
         {
         }

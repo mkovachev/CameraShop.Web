@@ -1,6 +1,6 @@
 using System;
 
-namespace CameraShop.Web.Models
+namespace CameraShop.Web.ViewModels
 {
     public class ErrorViewModel
     {
