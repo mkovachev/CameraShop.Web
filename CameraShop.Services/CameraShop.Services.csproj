@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <Folder Include="Enums\" />
-    <Folder Include="ServiceModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CameraShop.Data\CameraShop.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -23,4 +23,8 @@
     <ProjectReference Include="..\CameraShop.Services\CameraShop.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Camera\" />
+  </ItemGroup>
+
 </Project>
