@@ -13,25 +13,26 @@ namespace CameraShop.Services.Services
 
         public void GetUserProfile(int id)
         {
-            return this.db.Users
-                         .OrderBy(u => u.Id)
-                         .Select(u => new UserServiceModel
-                         {
-                             Id = u.Id,
-                             Email = u.Email,
-                             PhoneNumber = u.PhoneNumber,
-                             Cameras = u.Cameras.Select(c => new CameraServiceModel
-                             {
-                                 Id = c.Id,
-                                 Make = c.Make,
-                                 Model = c.Model,
-                                 Price = c.Price,
-                                 Quantity = c.Quantity.Count(),
-                                 ImageURL = c.ImageURL
-                             })
-
-                         })
-                         .ToList();
+            
+            //his.db.Users
+            //            .OrderBy(u => u.Id)
+            //            .Select(u => new UserServiceModel
+            //            {
+            //                Id = u.Id,
+            //                Email = u.Email,
+            //                PhoneNumber = u.PhoneNumber,
+            //                Cameras = u.Cameras.Select(c => new CameraServiceModel
+            //                {
+            //                    Id = c.Id,
+            //                    Make = c.Make,
+            //                    Model = c.Model,
+            //                    Price = c.Price,
+            //                    Quantity = c.Quantity.Count(),
+            //                    ImageURL = c.ImageURL
+            //                })
+            //
+            //            })
+            //            .ToList();
         }
     }
 }

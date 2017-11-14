@@ -52,10 +52,14 @@ namespace CameraShop.Data.Migrations
 
                     b.Property<int>("Quantity");
 
+                    b.Property<string>("UserId");
+
                     b.Property<string>("VideoResolution")
                         .HasMaxLength(15);
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Cameras");
                 });
@@ -217,6 +221,13 @@ namespace CameraShop.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("CameraShop.Data.Models.Camera", b =>
+                {
+                    b.HasOne("CameraShop.Data.Models.User")
+                        .WithMany("Cameras")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
