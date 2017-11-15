@@ -1,7 +1,9 @@
-﻿namespace CameraShop.Services.Contracts
+﻿using CameraShop.Services.ServiceModels;
+
+namespace CameraShop.Services.Contracts
 {
     public interface IUserService
     {
-        void GetUserProfile(int id);
+        UserServiceModel GetUserProfile(string id);
     }
 }

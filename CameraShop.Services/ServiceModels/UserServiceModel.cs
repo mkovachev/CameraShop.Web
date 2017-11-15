@@ -8,6 +8,11 @@ namespace CameraShop.Services.ServiceModels
         public string Id { get; set; }
 
         [Required]
+        [Range(4, 20)]
+        [RegularExpression("[A-Za-z]", ErrorMessage = "Name can contain only letters")]
+        public string UserName { get; set; }
+
+        [Required]
         public string Email { get; set; }
 
         [Required]
