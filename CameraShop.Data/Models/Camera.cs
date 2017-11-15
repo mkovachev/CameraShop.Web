@@ -46,5 +46,9 @@ namespace CameraShop.Data.Models
 
         public ImageURL ImageURL { get; set; }
 
+        public string UserId { get; set; }
+
+        public User User { get; set; }
+
     }
 }

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<CameraServiceModel>
+@{
+    ViewData["Title"] = "All";
+}
+<h2>@ViewData["Title"]</h2>
+
+<ul class="list-group list-group-item-info">
+    @foreach (var camera in Model)
+    {
+        <li class="Email">@camera.Make @camera.Model @camera.Price</li>
+        <li class=""><a href="cameras/id/details"></a></li>
+    }
+</ul>

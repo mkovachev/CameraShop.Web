@@ -2,6 +2,7 @@
 using CameraShop.Data.Models;
 using CameraShop.Services.Contracts;
 using CameraShop.Services.Services;
+using CameraShop.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -36,13 +37,17 @@ namespace CameraShop.Web
                 .AddDefaultTokenProviders();
 
             // Add application services
-            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddServices();
+            // services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // auto migrations
+            app.UseDatabaseMigration();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

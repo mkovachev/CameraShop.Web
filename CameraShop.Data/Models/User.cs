@@ -5,6 +5,6 @@ namespace CameraShop.Data.Models
 {
     public class User : IdentityUser
     {
-        public IEnumerable<Camera> Cameras { get; set; }
+        public ICollection<Camera> Cameras { get; set; } = new HashSet<Camera>();
     }
 }
