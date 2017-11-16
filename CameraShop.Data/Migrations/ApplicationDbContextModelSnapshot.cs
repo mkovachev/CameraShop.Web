@@ -27,9 +27,11 @@ namespace CameraShop.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(6000);
 
-                    b.Property<int>("ImageURL");
+                    b.Property<int>("ImageURL")
+                        .HasMaxLength(2000);
 
                     b.Property<bool>("IsFullFrame");
 
@@ -37,13 +39,13 @@ namespace CameraShop.Data.Migrations
 
                     b.Property<int>("Make");
 
-                    b.Property<byte>("MaxISO");
+                    b.Property<int>("MaxISO");
 
                     b.Property<int>("MaxShutterSpeed");
 
-                    b.Property<byte>("MinISO");
+                    b.Property<int>("MinISO");
 
-                    b.Property<byte>("MinShutterSpeed");
+                    b.Property<int>("MinShutterSpeed");
 
                     b.Property<string>("Model")
                         .IsRequired();
