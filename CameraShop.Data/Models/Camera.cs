@@ -44,7 +44,7 @@ namespace CameraShop.Data.Models
 
         [MinLength(10)]
         [MaxLength(2000)]
-        public ImageURL ImageURL { get; set; }
+        public string ImageURL { get; set; }
 
         public string UserId { get; set; }
 

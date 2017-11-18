@@ -21,9 +21,11 @@ namespace CameraShop.Services.Contracts
             string videoResolution,
             IEnumerable<LightMetering> lightMeterings,
             string description,
-            ImageURL imageURL,
+            string imageURL,
             string userId);
 
-        void Delete();
+        void Edit(string id, Make make, string model, double price, int quantity, int minShutterSpeed, int maxShutterSpeed, MinISO minISO, int maxISO, bool isFullFrame, string videoResolution, IEnumerable<LightMetering> lightMeterings, string description, string imageURL, string userId);
+
+        void Delete(string id);
     }
 }

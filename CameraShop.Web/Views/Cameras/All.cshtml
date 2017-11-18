@@ -3,11 +3,33 @@
     ViewData["Title"] = "All";
 }
 <h2>@ViewData["Title"]</h2>
-
-<ul class="list-group list-group-item-info">
+<table class="table table-bordered table-hover">
+<thead>
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+    </tr>
+</thead>
+<tbody>
     @foreach (var camera in Model)
     {
-        <li class="Email">@camera.Make @camera.Model @camera.Price</li>
-        <li class=""><a href="cameras/id/details"></a></li>
+        
+        <tr>
+            <td>@camera.Make</td>
+            <td>@camera.Model</td>
+            <td>@camera.Price.ToString("F2")</td>
+            <td>@camera.Quantity</td>
+            <td><img src="@camera.ImageURL" style="height:50px; width:50px;"/></td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/cameras/edit/@camera.Id">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="cameras/id/@camera.Id">Details</a>
+            </td>
+        </tr>
     }
-</ul>
+</tbody>
+</table>
