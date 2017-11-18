@@ -1,9 +1,12 @@
-﻿namespace CameraShop.Data.Enums
+﻿using System;
+
+namespace CameraShop.Data.Enums
 {
+    [Flags]
     public enum LightMetering
     {
-        Spot,
-        CenterWeighted,
-        Evaluative
+        Spot = 1,
+        CenterWeighted = 2,
+        Evaluative = 4
     }
 }
