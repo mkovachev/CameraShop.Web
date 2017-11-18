@@ -1,6 +1,6 @@
 ﻿using CameraShop.Data.Models;
 using CameraShop.Services.Contracts;
-using CameraShop.Web.Services;
+using CameraShop.Web.Infrastructure.Extensions;
 using CameraShop.Web.ViewModels.ManageViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
