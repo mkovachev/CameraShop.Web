@@ -1,10 +1,10 @@
 ﻿using CameraShop.Data;
+using CameraShop.Data.Enums;
+using CameraShop.Data.Models;
 using CameraShop.Services.Contracts;
 using CameraShop.Services.ServiceModels;
 using System.Collections.Generic;
 using System.Linq;
-using CameraShop.Data.Enums;
-using CameraShop.Data.Models;
 
 namespace CameraShop.Services.Services
 {
@@ -14,7 +14,7 @@ namespace CameraShop.Services.Services
 
         public CameraService(CameraShopDbContext db) => this.db = db;
 
-        public void Add(Make make, string model, double price, int quantity, int minShutterSpeed, int maxShutterSpeed, MinISO minISO, int maxISO, bool isFullFrame, ImageURL imageURL)
+        public void Add(Make make, string model, double price, int quantity, int minShutterSpeed, int maxShutterSpeed, MinISO minISO, int maxISO, bool isFullFrame, string videoResolution, IEnumerable<LightMetering> lightMeterings, string description, ImageURL imageURL, string userId)
         {
             var camera = new Camera
             {
@@ -27,6 +27,9 @@ namespace CameraShop.Services.Services
                 MinISO = minISO,
                 MaxISO = maxISO,
                 IsFullFrame = isFullFrame,
+                VideoResolution = videoResolution,
+                LightMetering = (LightMetering)lightMeterings.Cast<int>().Sum(),
+                Description = description,
                 ImageURL = imageURL
             };
 

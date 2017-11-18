@@ -10,10 +10,10 @@ namespace CameraShop.Services.ServiceModels
         public Make Make { get; set; }
 
         [Required]
-        [RegularExpression("\b[A-Z0-9]+(?:-[A-Z0-9]+)+", ErrorMessage = "Model can contain only uppercase letters, digits and dash")]
+        [RegularExpression("^[a-zA-Z0-9]*$", ErrorMessage = "Model can contain only uppercase letters, digits and dash")]
         public string Model { get; set; }
 
-        [Range(0, double.MaxValue)]
+        [Range(0, double.MaxValue, ErrorMessage ="Price can be max 1 Million")]
         [DataType(DataType.Currency)]
         public double Price { get; set; }
 

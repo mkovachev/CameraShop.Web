@@ -8,7 +8,21 @@ namespace CameraShop.Services.Contracts
     {
         IEnumerable<CameraServiceModel> GetAll();
 
-        void Add(Make make, string model, double price, int quantity, int MinShutterSpeed, int MaxShutterSpeed, MinISO MinISO, int MaxISO, bool IsFullFrame, ImageURL imageURL);
+        void Add(
+            Make make,
+            string model,
+            double price,
+            int quantity,
+            int minShutterSpeed,
+            int maxShutterSpeed,
+            MinISO minISO,
+            int maxISO,
+            bool isFullFrame,
+            string videoResolution,
+            IEnumerable<LightMetering> lightMeterings,
+            string description,
+            ImageURL imageURL,
+            string userId);
 
         void Delete();
     }
