@@ -1,0 +1,33 @@
+﻿@model CameraExtendedServiceModel
+@{
+    ViewData["Title"] = $"{Model.Make} {Model.Model} Details";
+}
+<h2>@ViewData["Title"]</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Make</td>
+            <td>@Model.Model</td>
+            <td>@Model.Price.ToString("F2")</td>
+            <td>@Model.Quantity</td>
+            <td>@Model.Description</td>
+            <td><img src="@Model.ImageURL" style="height:50px; width:50px;" /></td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/cameras/edit/@Model.Id">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" href="/cameras/delete">Delete Camera</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

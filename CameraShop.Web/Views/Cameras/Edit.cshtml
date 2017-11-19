@@ -1,0 +1,15 @@
+﻿@model CameraExtendedServiceModel
+@{
+    ViewData["Title"] = "Edit Camera";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    @Html.Partial("_CreateOrEditForm", Model)
+    <br />
+    <a class="btn btn-danger" href="/cameras/delete">Delete Camera</a>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
