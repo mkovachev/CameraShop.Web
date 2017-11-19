@@ -1,0 +1,19 @@
+﻿@model UserServiceModel
+@{
+    ViewData["Title"] = $"{Model.UserName}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<ul class="list-group list-group-item-info">
+    <li class="Email">@Model.Email</li>
+    <li class="glyphicon-earphone">@Model.PhoneNumber</li>
+    @foreach (var camera in Model.Cameras)
+    {
+        <li>@camera.Make</li>
+        <li>@camera.Model</li>
+        <li>@camera.Price</li>
+        <li>@camera.Quantity</li>
+        <li><img src="@camera.ImageURL" style="height:50px; width:50px;" /></li>
+    }
+</ul>
