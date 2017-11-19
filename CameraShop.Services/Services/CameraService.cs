@@ -14,6 +14,47 @@ namespace CameraShop.Services.Services
 
         public CameraService(CameraShopDbContext db) => this.db = db;
 
+        public CameraExtendedServiceModel GetCameraById(string id)
+        {
+            return this.db.Cameras
+                    .Where(c => c.Id == id)
+                    .Select(c => new CameraExtendedServiceModel
+                    {
+                        Id = c.Id,
+                        Make = c.Make,
+                        Model = c.Model,
+                        Price = c.Price,
+                        Quantity = c.Quantity,
+                        MinShutterSpeed = c.MinShutterSpeed,
+                        MaxShutterSpeed = c.MaxShutterSpeed,
+                        MinISO = c.MinISO,
+                        MaxISO = c.MaxISO,
+                        IsFullFrame = c.IsFullFrame,
+                        VideoResolution = c.VideoResolution,
+                        //LightMeterings = c.LightMetering.Select(l => new SelectListItem
+                        //{
+                        //    Text = l.Name
+                        //}),
+                        Description = c.Description,
+                        ImageURL = c.ImageURL
+                    })
+                    .FirstOrDefault();
+        }
+
+        public IEnumerable<CameraServiceModel> GetAll()
+            => this.db.Cameras
+                .OrderBy(c => c.Id)
+                .Select(c => new CameraServiceModel
+                {
+                    Id = c.Id,
+                    Make = c.Make,
+                    Model = c.Model,
+                    Price = c.Price,
+                    Quantity = c.Quantity,
+                    ImageURL = c.ImageURL
+                })
+                .ToList();
+
         public void Add(Make make, string model, double price, int quantity, int minShutterSpeed, int maxShutterSpeed, MinISO minISO, int maxISO, bool isFullFrame, string videoResolution, IEnumerable<LightMetering> lightMeterings, string description, string imageURL, string userId)
         {
             var camera = new Camera
@@ -36,20 +77,6 @@ namespace CameraShop.Services.Services
             this.db.Add(camera);
             this.db.SaveChanges();
         }
-
-        public IEnumerable<CameraServiceModel> GetAll()
-            => this.db.Cameras
-                .OrderBy(c => c.Id)
-                .Select(c => new CameraServiceModel
-                {
-                    Id = c.Id,
-                    Make = c.Make,
-                    Model = c.Model,
-                    Price = c.Price,
-                    Quantity = c.Quantity,
-                    ImageURL = c.ImageURL
-                })
-                .ToList();
 
         public void Edit(string id, Make make, string model, double price, int quantity, int minShutterSpeed, int maxShutterSpeed, MinISO minISO, int maxISO, bool isFullFrame, string videoResolution, IEnumerable<LightMetering> lightMeterings, string description, string imageURL, string userId)
         {

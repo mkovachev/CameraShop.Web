@@ -18,17 +18,16 @@ namespace CameraShop.Web.Controllers
             this.userManager = userManager;
         }
 
-        public IActionResult All()
-        {
-            return View(this.cameras.GetAll());
-        }
+        public IActionResult All() => View(this.cameras.GetAll());
+
+        public IActionResult Details(string id) => View(this.cameras.GetCameraById(id));
 
         [Authorize]
         public IActionResult Add() => View();
 
         [Authorize]
         [HttpPost]
-        public IActionResult Add(AddCameraServiceModel cameraModel)
+        public IActionResult Add(CameraExtendedServiceModel cameraModel)
         {
             if (!ModelState.IsValid)
             {
@@ -57,11 +56,21 @@ namespace CameraShop.Web.Controllers
         }
 
         [Authorize]
-        public IActionResult Edit() => View();
+        public IActionResult Edit(string id)
+        {
+            var camera = this.cameras.GetCameraById(id);
+
+            if (camera == null)
+            {
+                return NotFound();
+            }
+
+            return View();
+        } 
 
         [Authorize]
         [HttpPost]
-        public IActionResult Edit(AddCameraServiceModel cameraModel)
+        public IActionResult Edit(CameraExtendedServiceModel cameraModel)
         {
             if (!ModelState.IsValid)
             {
@@ -85,7 +94,7 @@ namespace CameraShop.Web.Controllers
               this.userManager.GetUserId(User)
               );
 
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction(nameof(CamerasController.All));
         }
 
         [Authorize]
@@ -96,7 +105,7 @@ namespace CameraShop.Web.Controllers
         {
             this.cameras.Delete(id);
 
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return RedirectToAction(nameof(CamerasController.All));
         }
     }
 }

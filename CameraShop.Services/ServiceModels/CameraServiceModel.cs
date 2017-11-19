@@ -5,7 +5,7 @@ namespace CameraShop.Services.ServiceModels
 {
     public class CameraServiceModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public Make Make { get; set; }
 

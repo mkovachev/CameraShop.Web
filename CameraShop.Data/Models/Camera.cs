@@ -5,7 +5,7 @@ namespace CameraShop.Data.Models
 {
     public class Camera
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public Make Make { get; set; }
 

@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<CameraServiceModel>
 @{
-    ViewData["Title"] = "All";
+    ViewData["Title"] = "All Cameras";
 }
 <h2>@ViewData["Title"]</h2>
+
 <table class="table table-bordered table-hover">
 <thead>
     <tr>
@@ -27,7 +28,7 @@
                 <a class="btn btn-info btn-sm" href="/cameras/edit/@camera.Id">Edit</a>
             </td>
             <td>
-                <a class="btn btn-danger btn-sm" href="cameras/id/@camera.Id">Details</a>
+                <a class="btn btn-danger btn-sm" href="/cameras/details/@camera.Id">Details</a>
             </td>
         </tr>
     }
