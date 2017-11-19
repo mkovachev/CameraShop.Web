@@ -1,6 +1,7 @@
 ﻿using CameraShop.Data.Models;
 using CameraShop.Services.Contracts;
 using CameraShop.Web.Infrastructure.Extensions;
+using CameraShop.Web.Infrastructure.Extensions.Filters;
 using CameraShop.Web.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -48,6 +49,7 @@ namespace CameraShop.Web.Controllers
             return View();
         }
 
+        [MeasureTime]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
