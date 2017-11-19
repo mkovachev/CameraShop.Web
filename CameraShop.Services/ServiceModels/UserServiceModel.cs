@@ -9,10 +9,11 @@ namespace CameraShop.Services.ServiceModels
 
         [Required]
         [Range(4, 20)]
-        [RegularExpression("[A-Za-z]", ErrorMessage = "Name can contain only letters")]
+        [RegularExpression("^[A-Za-z]+$", ErrorMessage = "Name can contain only letters")]
         public string UserName { get; set; }
 
         [Required]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]

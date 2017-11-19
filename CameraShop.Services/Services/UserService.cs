@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CameraShop.Services.Services
 {
-    public class UserService //: IUserService
+    public class UserService : IUserService
     {
         private readonly CameraShopDbContext db;
 
