@@ -1,4 +1,5 @@
-﻿using CameraShop.Web.ViewModels;
+﻿using CameraShop.Web.Infrastructure.Extensions.Filters;
+using CameraShop.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,22 +7,9 @@ namespace CameraShop.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [Log]
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
