@@ -1,7 +1,5 @@
 ﻿using CameraShop.Data;
 using CameraShop.Data.Models;
-using CameraShop.Services.Contracts;
-using CameraShop.Services.Services;
 using CameraShop.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +31,7 @@ namespace CameraShop.Web
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
             })
-                .AddEntityFrameworkStores<CameraShopDbContext>() // use db
+                .AddEntityFrameworkStores<CameraShopDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddServices();
