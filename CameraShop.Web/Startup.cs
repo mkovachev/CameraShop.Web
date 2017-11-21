@@ -33,10 +33,9 @@ namespace CameraShop.Web
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
             })
-                .AddEntityFrameworkStores<CameraShopDbContext>()
+                .AddEntityFrameworkStores<CameraShopDbContext>() // use db
                 .AddDefaultTokenProviders();
 
-            // Add application services
             services.AddServices();
             // services.AddTransient<IEmailSender, EmailSender>();
 
