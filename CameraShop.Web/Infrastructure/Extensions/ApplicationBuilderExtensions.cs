@@ -36,15 +36,13 @@ namespace CameraShop.Web.Infrastructure.Extensions
                         //result.Errors...
                     }
 
-                    var adminName = "admin";
-
-                    var admin = await userManager.FindByNameAsync(adminName);
+                    var admin = await userManager.FindByNameAsync("admin@test.com");
 
                     if (admin == null)
                     {
                         admin = new User
                         {
-                            UserName = adminName,
+                            UserName = "admin@test.com",
                             Email = "admin@test.com" 
                         };
 
