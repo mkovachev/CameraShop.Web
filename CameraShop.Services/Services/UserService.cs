@@ -12,10 +12,10 @@ namespace CameraShop.Services.Services
 
         public UserService(CameraShopDbContext db) => this.db = db;
 
-        public UserServiceModel GetUserProfile(string id)
+        public UserServiceModel GetUserProfile(string email)
             => this.db
                 .Users
-                .Where(u => u.Id == id)
+                .Where(u => u.Email == email)
                 .Select(u => new UserServiceModel
                 {
                     Id = u.Id,

@@ -41,11 +41,15 @@
                             <li><a href="/cameras/add">Add Camera</a></li>
                         </ul>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/users/profile/@User.Identity.Name">My Profile</a></li>
+                    }
                     @if (User.IsInRole(GlobalConstants.AdministratorRole))
                     {
-                        <li><a asp-area="" asp-controller="Users" asp-action="All">All Users</a></li>
+                        <li><a href="/users/all">All Users</a></li>
                     }
-                    
+
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>

@@ -5,7 +5,7 @@ namespace CameraShop.Services.Contracts
 {
     public interface IUserService
     {
-        UserServiceModel GetUserProfile(string id);
+        UserServiceModel GetUserProfile(string email);
 
         IEnumerable<UserServiceModel> GetUserSWithRoles();
 
