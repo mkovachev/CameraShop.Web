@@ -2,9 +2,7 @@
 @{
     ViewData["Title"] = "All User";
 }
-
 <h2>@ViewData["Title"]</h2>
-
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -15,7 +13,6 @@
     <tbody>
         @foreach (var user in Model)
         {
-
             <tr>
                 <td>@user.UserName</td>
                 <td>@user.Email</td>
@@ -29,4 +26,3 @@
         }
     </tbody>
 </table>
-

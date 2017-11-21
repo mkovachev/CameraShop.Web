@@ -4,11 +4,7 @@
 }
 <h2>@ViewData["Title"]</h2>
 <div>
-    <ul>
-        <li>@Model.UserName</li>
-        <li>@Model.Email</li>
-        <li>@Model.PhoneNumber</li>
-    </ul>
+    <span>@Model.PhoneNumber</span>
     <ul>
         @foreach (var camera in Model.Cameras)
             {
