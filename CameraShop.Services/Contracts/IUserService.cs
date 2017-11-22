@@ -9,5 +9,7 @@ namespace CameraShop.Services.Contracts
 
         IEnumerable<UserServiceModel> GetUserSWithRoles();
 
+        void Create(string id, string username, string email);
+
     }
 }

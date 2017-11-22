@@ -16,11 +16,12 @@ namespace CameraShop.Services.ServiceModels
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required]
         [Display(Name ="Phone")]
         public string PhoneNumber { get; set; }
 
         public IEnumerable<CameraServiceModel> Cameras { get; set; }
+
+        public IEnumerable<string> Roles { get; set; }
     }
 }
     
